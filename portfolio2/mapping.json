@@ -1,0 +1,538 @@
+{
+  "design/carusel/educational/avocat": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 460050
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 545076
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 458928
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 113930
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 587144
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 392994
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 191866
+    }
+  ],
+  "design/carusel/educational/medical": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 162880
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 161710
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 174106
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 156342
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 153008
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 165236
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 144256
+    }
+  ],
+  "design/carusel/storytelling": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 219692
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 185906
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 206380
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 207708
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 238800
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 127256
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 165646
+    }
+  ],
+  "design/carusel/showcase": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 263634
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 184350
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 167540
+    },
+    {
+      "src": "4.jpeg",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 72616
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 209168
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 131486
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 84602
+    }
+  ],
+  "design/carusel/promotional/ivory-1": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 566392
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 383012
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 369070
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 578994
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 539372
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 230236
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 643720
+    }
+  ],
+  "design/carusel/promotional/ivory-2": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 96404
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 168078
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 158832
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 156894
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 167008
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 198162
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 139754
+    }
+  ],
+  "design/carusel/promotional/urbancat": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 161910
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 162144
+    },
+    {
+      "src": "3.png",
+      "dst": "3.webp",
+      "type": "image",
+      "size": 189546
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 179020
+    },
+    {
+      "src": "5.png",
+      "dst": "5.webp",
+      "type": "image",
+      "size": 119960
+    },
+    {
+      "src": "6.png",
+      "dst": "6.webp",
+      "type": "image",
+      "size": 222248
+    },
+    {
+      "src": "7.png",
+      "dst": "7.webp",
+      "type": "image",
+      "size": 138402
+    }
+  ],
+  "design/post/emotional": [
+    {
+      "src": "Gemini_Generated_Image_cikc69cikc69cikc.png",
+      "dst": "gemini-generated-image-cikc69cikc69cikc.webp",
+      "type": "image",
+      "size": 156720
+    },
+    {
+      "src": "Gemini_Generated_Image_m3kqo7m3kqo7m3kq.png",
+      "dst": "gemini-generated-image-m3kqo7m3kqo7m3kq.webp",
+      "type": "image",
+      "size": 194138
+    }
+  ],
+  "design/ecommerce/product-hero/litiera": [
+    {
+      "src": "1.png",
+      "dst": "1.webp",
+      "type": "image",
+      "size": 162158
+    },
+    {
+      "src": "11.png",
+      "dst": "11.webp",
+      "type": "image",
+      "size": 112738
+    },
+    {
+      "src": "2.png",
+      "dst": "2.webp",
+      "type": "image",
+      "size": 40324
+    },
+    {
+      "src": "22.png",
+      "dst": "22.webp",
+      "type": "image",
+      "size": 53652
+    },
+    {
+      "src": "33.png",
+      "dst": "33.webp",
+      "type": "image",
+      "size": 31460
+    },
+    {
+      "src": "4.png",
+      "dst": "4.webp",
+      "type": "image",
+      "size": 99280
+    },
+    {
+      "src": "44.png",
+      "dst": "44.webp",
+      "type": "image",
+      "size": 54744
+    },
+    {
+      "src": "66.png",
+      "dst": "66.webp",
+      "type": "image",
+      "size": 68832
+    }
+  ],
+  "design/ecommerce/product-hero/google": [
+    {
+      "src": "Fantana-UrbanCat_05.png",
+      "dst": "fantana-urbancat-05.webp",
+      "type": "image",
+      "size": 107454
+    }
+  ],
+  "design/ecommerce/landing-page": [
+    {
+      "src": "URBANCATSSSSS.png",
+      "dst": "urbancatsssss.webp",
+      "type": "image",
+      "size": 355792
+    }
+  ],
+  "design/ecommerce/hero-categorii": [
+    {
+      "src": "123d.png",
+      "dst": "123d.webp",
+      "type": "image",
+      "size": 141770
+    },
+    {
+      "src": "cvvc.png",
+      "dst": "cvvc.webp",
+      "type": "image",
+      "size": 147050
+    },
+    {
+      "src": "famrinaurbancat.png",
+      "dst": "famrinaurbancat.webp",
+      "type": "image",
+      "size": 132012
+    }
+  ],
+  "design/ecommerce/emag-style": [
+    {
+      "src": "Fantana-UrbanCat_01.png",
+      "dst": "fantana-urbancat-01.webp",
+      "type": "image",
+      "size": 173542
+    },
+    {
+      "src": "Fantana-UrbanCat_02.png",
+      "dst": "fantana-urbancat-02.webp",
+      "type": "image",
+      "size": 129822
+    },
+    {
+      "src": "Fantana-UrbanCat_03.png",
+      "dst": "fantana-urbancat-03.webp",
+      "type": "image",
+      "size": 170714
+    }
+  ],
+  "design/ecommerce/studio": [
+    {
+      "src": "fantana-automata-pentru-pisici-2l-2132569.webp",
+      "dst": "fantana-automata-pentru-pisici-2l-2132569.webp",
+      "type": "image",
+      "size": 132598
+    }
+  ],
+  "design/ecommerce/showcase-medical": [
+    {
+      "src": "Fantana-UrbanCat_04.png",
+      "dst": "fantana-urbancat-04.webp",
+      "type": "image",
+      "size": 74240
+    }
+  ],
+  "design/ecommerce/cozy-apartment": [
+    {
+      "src": "11.png",
+      "dst": "11.webp",
+      "type": "image",
+      "size": 112738
+    },
+    {
+      "src": "Minge-Interactiva_03.png",
+      "dst": "minge-interactiva-03.webp",
+      "type": "image",
+      "size": 301514
+    },
+    {
+      "src": "fantana-automata-pentru-pisici-55l-inox-uv-c-8059760.webp",
+      "dst": "fantana-automata-pentru-pisici-55l-inox-uv-c-8059760.webp",
+      "type": "image",
+      "size": 166940
+    }
+  ],
+  "design/ecommerce/ugc": [
+    {
+      "src": "fantana-automata-pentru-pisici-55l-inox-uv-c-4913024.webp",
+      "dst": "fantana-automata-pentru-pisici-55l-inox-uv-c-4913024.webp",
+      "type": "image",
+      "size": 332126
+    }
+  ],
+  "design/ecommerce/editorial": [
+    {
+      "src": "123123123.webp",
+      "dst": "123123123.webp",
+      "type": "image",
+      "size": 219910
+    }
+  ],
+  "design/servicii/logo/ghibu": [
+    {
+      "src": "Ghibu-logo.png",
+      "dst": "ghibu-logo.webp",
+      "type": "image",
+      "size": 47514
+    }
+  ],
+  "design/servicii/logo/urbancat": [
+    {
+      "src": "UrbanCVatLogo.png",
+      "dst": "urbancvatlogo.webp",
+      "type": "image",
+      "size": 36184
+    }
+  ],
+  "video/cinematic": [
+    {
+      "src": "Orașul e al lor.urbancat.ro (2).mp4",
+      "dst": "ora-ul-e-al-lor.urbancat.ro-2.mp4",
+      "type": "video",
+      "size": 4797715
+    }
+  ],
+  "video/animat": [
+    {
+      "src": "CatNip acum pe Urbancat.ro.mp4",
+      "dst": "catnip-acum-pe-urbancat.ro.mp4",
+      "type": "video",
+      "size": 10118424
+    }
+  ],
+  "video/tiktok": [
+    {
+      "src": "Apă proaspătă, filtrată continuu, exact cum ar trebui să fie. Fântânile UrbanCat sunt construite.mp4",
+      "dst": "ap-proasp-t-filtrat-continuu-exact-cum-ar-trebui-s-fie.-f-nt-nile-urbancat-sunt-construite.mp4",
+      "type": "video",
+      "size": 2022802
+    }
+  ],
+  "video/asmr": [
+    {
+      "src": "Ascultă. #asmr #pisici (1).mp4",
+      "dst": "ascult-.-asmr-pisici-1.mp4",
+      "type": "video",
+      "size": 1037939
+    }
+  ],
+  "video/medical-ba": [
+    {
+      "src": "Dr Bogdan Iorga - Caz Vali.mp4",
+      "dst": "dr-bogdan-iorga-caz-vali.mp4",
+      "type": "video",
+      "size": 30891515
+    }
+  ]
+}

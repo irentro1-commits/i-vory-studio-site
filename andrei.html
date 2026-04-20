@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrei Traian Toader — AI Visual Production Portfolio</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--card:#141414;--text:#e8e8e8;--muted:#888;--accent:#d4a853;--radius:6px}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.6}
+.container{max-width:1400px;margin:0 auto;padding:0 24px}
+nav{transition:transform .3s ease !important}nav.nav-hidden{transform:translateY(-100%) !important}</style>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}</script>
+
+
+<link rel="alternate" hreflang="ro" href="https://i-vory.studio/andrei.html">
+<script src="https://t.contentsquare.net/uxa/1c375afd3bba3.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ND5ZF7NB');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- MOBILE PERFORMANCE PATCH v4 — tune lag without killing design -->
+<style id="mobile-perf-patch">
+@media (max-width: 900px), (pointer: coarse) {
+  /* KILL backdrop-filter only (the #1 scroll lag cause) */
+  *, *::before, *::after {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Solid bg on fixed elements */
+  nav, .nav, #nav, .dock, .wa-float {
+    background: rgba(5, 5, 5, 0.96) !important;
+  }
+
+  /* HIDE hero video on mobile (empty black rectangle killer) */
+  .hero-video, #heroVideo, #hvVid, .hv-play, #hvPlay {
+    display: none !important;
+  }
+
+  /* Hide section s2 that only contained the hero video */
+  section.s2 .hero-video { display: none !important; }
+
+  /* Reduce huge box-shadow blur to 15px max */
+  .pk, .type-card, .proof-card, .faq-item, .contact-alt,
+  .card, .testim, button, .nc, .dock__chip.is-active {
+    box-shadow: 0 3px 15px rgba(0,0,0,0.45) !important;
+  }
+
+  /* Hide meteor cursor (irrelevant on touch) */
+  #meteor-cursor, #meteor-flame, #meteor-flame2, #meteor-flame3,
+  .meteor-cursor, [id^="meteor"], [class^="meteor"] {
+    display: none !important;
+  }
+
+  /* Reduce transitions (snappy response) */
+  * {
+    transition-duration: 0.2s !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+<script id="mobile-perf-js">
+/* Block ONLY meteor-cursor + premium-fx on mobile, nothing else */
+(function(){
+  var isMobile = window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 900;
+  if (!isMobile) return;
+  window.MOBILE_DEVICE = true;
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('[id^="meteor"], [class^="meteor"]').forEach(function(el){el.remove();});
+    /* Also remove hero-video element entirely to free memory */
+    var hv = document.getElementById('heroVideo') || document.querySelector('.hero-video');
+    if (hv) hv.remove();
+    var hvVid = document.getElementById('hvVid');
+    if (hvVid) { hvVid.pause(); hvVid.remove(); }
+  });
+})();
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5ZF7NB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<style>
+header{padding:80px 0 40px;border-bottom:1px solid #222}
+header h1{font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,52px);font-weight:700;margin-bottom:8px}
+header .subtitle{font-size:15px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+header .bio{max-width:680px;font-size:15px;color:#bbb;line-height:1.7}
+header .bio strong{color:var(--accent);font-weight:500}
+.section{padding:60px 0;border-bottom:1px solid #1a1a1a}
+.section-label{font-size:11px;text-transform:uppercase;letter-spacing:3px;color:var(--accent);margin-bottom:6px}
+.section-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:8px}
+.section-desc{font-size:14px;color:var(--muted);max-width:600px;margin-bottom:30px;line-height:1.6}
+.grid{display:grid;gap:12px}
+.grid-7{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(3,1fr)}
+.grid-2{grid-template-columns:repeat(2,1fr)}
+.grid img{width:100%;height:auto;border-radius:var(--radius);display:block;transition:transform .3s ease}
+.grid img:hover{transform:scale(1.03)}
+@media(max-width:768px){.grid-7,.grid-4{grid-template-columns:repeat(2,1fr)}.grid-2{grid-template-columns:1fr}}
+@media(max-width:480px){.grid-7,.grid-4{grid-template-columns:repeat(2,1fr)}}
+.lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.95);z-index:9999;justify-content:center;align-items:center}
+.lightbox.active{display:flex}
+.lightbox img{max-width:85vw;max-height:85vh;object-fit:contain;border-radius:8px}
+.grid img{cursor:zoom-in}
+.lb-arrow{position:fixed;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:#fff;font-size:36px;width:56px;height:56px;border-radius:50%;cursor:pointer;z-index:10000;transition:background .2s}
+.lb-arrow:hover{background:rgba(255,255,255,.3)}
+.lb-prev{left:24px}
+.lb-next{right:24px}
+.lb-close{position:fixed;top:20px;right:24px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer;z-index:10000}
+</style>
+<style>
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.tool-tag{background:#1a1a1a;border:1px solid #2a2a2a;padding:5px 14px;border-radius:20px;font-size:12px;color:var(--muted)}
+.tool-tag.primary{border-color:var(--accent);color:var(--accent)}
+footer{padding:60px 0 40px;text-align:center}
+footer p{font-size:13px;color:var(--muted)}
+footer a{color:var(--accent);text-decoration:none}
+.stats{display:flex;gap:40px;margin:24px 0 0;flex-wrap:wrap}
+.stat-num{font-family:'Playfair Display',serif;font-size:32px;color:var(--accent);font-weight:700}
+.stat-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+</style>
+<header>
+<div class="container">
+<h1>Andrei Traian Toader</h1>
+<p class="subtitle">AI-Native Visual Director &bull; Commercial Image Generation &bull; Bucharest, Romania</p>
+<p class="bio">Medical resident turned <strong>commercial AI content operator</strong>. I co-founded <strong>i-vory Studio</strong>, a social media content studio, and run <strong>UrbanCat</strong>, a cat-niche D2C brand. Every visual asset below was <strong>AI-generated using Nano Banana</strong> (Gemini) with iterative prompt refinement — including all in-image Romanian text with correct diacritics, directly from the prompt. Selected after hands-on evaluation of Midjourney and Flux for commercial product consistency.</p>
+<div class="tools">
+<span class="tool-tag primary">Nano Banana (primary)</span>
+<span class="tool-tag">Flux Dev</span>
+<span class="tool-tag">Midjourney (evaluated)</span>
+<span class="tool-tag">ComfyUI workflows</span>
+<span class="tool-tag">Prompt Engineering</span>
+</div>
+<div class="stats">
+<div><div class="stat-num">50+</div><div class="stat-label">Published assets</div></div>
+<div><div class="stat-num">4</div><div class="stat-label">Active brands</div></div>
+<div><div class="stat-num">7</div><div class="stat-label">Platforms</div></div>
+</div>
+</div>
+</header>
+<div class="container">
+<section class="section">
+<div class="section-label">Social Carousel</div>
+<div class="section-title">i-vory Studio — Commercial Carousel 1</div>
+<div class="section-desc">Educational carousel for social media — hook-driven structure with brand-consistent visual identity. All in-image text rendered with Romanian diacritics directly from prompt.</div>
+<div class="grid grid-7">
+<img src="portfolio/carousel-ivory-1/1.png" alt="Slide 1" loading="lazy">
+<img src="portfolio/carousel-ivory-1/2.png" alt="Slide 2" loading="lazy">
+<img src="portfolio/carousel-ivory-1/3.png" alt="Slide 3" loading="lazy">
+<img src="portfolio/carousel-ivory-1/4.png" alt="Slide 4" loading="lazy">
+<img src="portfolio/carousel-ivory-1/5.png" alt="Slide 5" loading="lazy">
+<img src="portfolio/carousel-ivory-1/6.png" alt="Slide 6" loading="lazy">
+<img src="portfolio/carousel-ivory-1/7.png" alt="Slide 7" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Social Carousel</div>
+<div class="section-title">i-vory Studio — Commercial Carousel 2</div>
+<div class="section-desc">Educational commercial carousel — debunking social media myths with data-driven slides. Bold typography, high-contrast visuals, Romanian text with diacritics rendered directly from prompt.</div>
+<div class="grid grid-7">
+<img src="portfolio/carousel-ivory-2/1.png" alt="Slide 1" loading="lazy">
+<img src="portfolio/carousel-ivory-2/2.png" alt="Slide 2" loading="lazy">
+<img src="portfolio/carousel-ivory-2/3.png" alt="Slide 3" loading="lazy">
+<img src="portfolio/carousel-ivory-2/4.png" alt="Slide 4" loading="lazy">
+<img src="portfolio/carousel-ivory-2/5.png" alt="Slide 5" loading="lazy">
+<img src="portfolio/carousel-ivory-2/6.png" alt="Slide 6" loading="lazy">
+<img src="portfolio/carousel-ivory-2/7.png" alt="Slide 7" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Social Carousel</div>
+<div class="section-title">i-vory Studio — Showcase</div>
+<div class="section-desc">Brand showcase carousel — visual identity system demonstration. Consistent palette, typography, and composition language across all frames.</div>
+<div class="grid grid-7">
+<img src="portfolio/carousel-ivory-showcase/1.png" alt="Slide 1" loading="lazy">
+<img src="portfolio/carousel-ivory-showcase/2.png" alt="Slide 2" loading="lazy">
+<img src="portfolio/carousel-ivory-showcase/3.png" alt="Slide 3" loading="lazy">
+<img src="portfolio/carousel-ivory-showcase/4.jpeg" alt="Slide 4" loading="lazy">
+<img src="portfolio/carousel-ivory-showcase/5.png" alt="Slide 5" loading="lazy">
+<img src="portfolio/carousel-ivory-showcase/6.png" alt="Slide 6" loading="lazy">
+<img src="portfolio/carousel-ivory-showcase/7.png" alt="Slide 7" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Social Carousel</div>
+<div class="section-title">i-vory Studio — Storytelling</div>
+<div class="section-desc">Narrative-driven carousel with emotional arc. Hook on slide 1, tension through middle frames, resolution and CTA on final slide.</div>
+<div class="grid grid-7">
+<img src="portfolio/carousel-ivory-storytelling/1.png" alt="Slide 1" loading="lazy">
+<img src="portfolio/carousel-ivory-storytelling/2.png" alt="Slide 2" loading="lazy">
+<img src="portfolio/carousel-ivory-storytelling/3.png" alt="Slide 3" loading="lazy">
+<img src="portfolio/carousel-ivory-storytelling/4.png" alt="Slide 4" loading="lazy">
+<img src="portfolio/carousel-ivory-storytelling/5.png" alt="Slide 5" loading="lazy">
+<img src="portfolio/carousel-ivory-storytelling/6.png" alt="Slide 6" loading="lazy">
+<img src="portfolio/carousel-ivory-storytelling/7.png" alt="Slide 7" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Social Carousel</div>
+<div class="section-title">UrbanCat — Promotional Carousel</div>
+<div class="section-desc">Product promotional carousel for cat-niche D2C brand. Pet-product interaction in lifestyle context, UGC-style aesthetic, AI-generated with consistent character across frames.</div>
+<div class="grid grid-7">
+<img src="portfolio/carousel-urbancat/1.png" alt="Slide 1" loading="lazy">
+<img src="portfolio/carousel-urbancat/2.png" alt="Slide 2" loading="lazy">
+<img src="portfolio/carousel-urbancat/3.png" alt="Slide 3" loading="lazy">
+<img src="portfolio/carousel-urbancat/4.png" alt="Slide 4" loading="lazy">
+<img src="portfolio/carousel-urbancat/5.png" alt="Slide 5" loading="lazy">
+<img src="portfolio/carousel-urbancat/6.png" alt="Slide 6" loading="lazy">
+<img src="portfolio/carousel-urbancat/7.png" alt="Slide 7" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Social Carousel</div>
+<div class="section-title">Andreas Popa — Educational Legal Carousel</div>
+<div class="section-desc">Educational carousel for a criminal defense lawyer client. Legal content adapted for social media consumption — complex concepts simplified visually while maintaining professional authority.</div>
+<div class="grid grid-7">
+<img src="portfolio/carousel-lawyer/1.png" alt="Slide 1" loading="lazy">
+<img src="portfolio/carousel-lawyer/2.png" alt="Slide 2" loading="lazy">
+<img src="portfolio/carousel-lawyer/3.png" alt="Slide 3" loading="lazy">
+<img src="portfolio/carousel-lawyer/4.png" alt="Slide 4" loading="lazy">
+<img src="portfolio/carousel-lawyer/5.png" alt="Slide 5" loading="lazy">
+<img src="portfolio/carousel-lawyer/6.png" alt="Slide 6" loading="lazy">
+<img src="portfolio/carousel-lawyer/7.png" alt="Slide 7" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Product Photography</div>
+<div class="section-title">UrbanCat — AI-Generated Product Shots</div>
+<div class="section-desc">E-commerce product imagery — studio shots, lifestyle compositions, and pet-product interaction. All AI-generated, zero traditional photography. Formats optimized for marketplace listings, PDP pages, and paid ads.</div>
+<div class="grid grid-4">
+<img src="portfolio/product-urbancat/1.png" alt="Product 1" loading="lazy">
+<img src="portfolio/product-urbancat/11.png" alt="Product 2" loading="lazy">
+<img src="portfolio/product-urbancat/2.png" alt="Product 3" loading="lazy">
+<img src="portfolio/product-urbancat/22.png" alt="Product 4" loading="lazy">
+<img src="portfolio/product-urbancat/33.png" alt="Product 5" loading="lazy">
+<img src="portfolio/product-urbancat/4.png" alt="Product 6" loading="lazy">
+<img src="portfolio/product-urbancat/44.png" alt="Product 7" loading="lazy">
+<img src="portfolio/product-urbancat/66.png" alt="Product 8" loading="lazy">
+</div>
+</section>
+<section class="section">
+<div class="section-label">Social Posts</div>
+<div class="section-title">Emotional Single-Image Posts</div>
+<div class="section-desc">Standalone emotional posts for engagement. Cinematic compositions with integrated Romanian text and diacritics rendered directly in-image.</div>
+<div class="grid grid-2">
+<img src="portfolio/posts-emotional/Gemini_Generated_Image_cikc69cikc69cikc.png" alt="Emotional post 1" loading="lazy">
+<img src="portfolio/posts-emotional/Gemini_Generated_Image_m3kqo7m3kqo7m3kq.png" alt="Emotional post 2" loading="lazy">
+</div>
+</section>
+</div>
+<footer>
+<div class="container">
+<p style="font-size:15px;color:var(--text);margin-bottom:8px">Andrei Traian Toader</p>
+<p>tandreit@gmail.com &bull; +40 726 712 899 &bull; Bucharest, Romania</p>
+<p style="margin-top:8px">
+<a href="https://www.tiktok.com/@ivory.ro69" target="_blank">@ivory.ro69</a> &bull;
+<a href="https://www.tiktok.com/@urbancat.ro" target="_blank">@urbancat.ro</a>
+</p>
+<p style="margin-top:24px;font-size:11px;color:#444">All visuals AI-generated using Nano Banana (Gemini) with iterative prompt refinement. Zero traditional photography.</p>
+</div>
+</footer>
+<div class="lightbox" id="lb">
+<button class="lb-close" onclick="closeLb()">&times;</button>
+<button class="lb-arrow lb-prev" onclick="navLb(-1)">&#8249;</button>
+<img id="lb-img" src="" alt="">
+<button class="lb-arrow lb-next" onclick="navLb(1)">&#8250;</button>
+</div>
+<script>
+const allImgs=[...document.querySelectorAll('.grid img')];let curIdx=0;
+function openLb(i){curIdx=i;document.getElementById('lb-img').src=allImgs[i].src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+function navLb(d){curIdx=(curIdx+d+allImgs.length)%allImgs.length;document.getElementById('lb-img').src=allImgs[curIdx].src;}
+allImgs.forEach((img,i)=>{img.onclick=()=>openLb(i);});
+document.getElementById('lb').addEventListener('click',e=>{if(e.target===e.currentTarget)closeLb();});
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('active'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')navLb(1);if(e.key==='ArrowLeft')navLb(-1);});
+</script>
+
+
+<script id="nav-auto-hide">
+(function(){
+  var nav=document.getElementById('nav')||document.querySelector('nav');
+  if(!nav)return;
+  var lastY=window.scrollY;
+  var ticking=false;
+  function update(){
+    var cur=window.scrollY;
+    if(cur<20){
+      nav.classList.remove('nav-hidden');
+      document.body.classList.remove('nav-hidden');
+    } else if(cur>lastY+4){
+      nav.classList.add('nav-hidden');
+      document.body.classList.add('nav-hidden');
+    } else if(cur<lastY-4){
+      nav.classList.remove('nav-hidden');
+      document.body.classList.remove('nav-hidden');
+    }
+    lastY=cur;
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(update);ticking=true;}
+  },{passive:true});
+})();
+</script>
+<script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/meteor-cursor.js";s.defer=true;document.head.appendChild(s);})();</script><!-- was: meteor-cursor.js -->
+<script src="/gtm-events.js?v=2" defer></script>
+</body>
+</html>

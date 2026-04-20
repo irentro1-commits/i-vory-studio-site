@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+Disallow: /andrei.html
+Disallow: /_*.html
+Disallow: /index-v7-backup.html
+Disallow: /ivory-v8.html
+Disallow: /ivory-v9.html
+Disallow: /portfolio.html
+
+# AI / LLM crawlers — explicit allow for AEO visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://i-vory.studio/sitemap.xml

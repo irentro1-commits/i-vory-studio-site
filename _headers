@@ -1,0 +1,50 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(self), battery=(), camera=(), display-capture=(), document-domain=(), encrypted-media=(), execution-while-not-rendered=(), execution-while-out-of-viewport=(), fullscreen=(self), gamepad=(), geolocation=(), gyroscope=(), hid=(), idle-detection=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(self), publickey-credentials-get=(), screen-wake-lock=(), serial=(), speaker-selection=(), sync-xhr=(), usb=(), web-share=(self), xr-spatial-tracking=()
+  Cross-Origin-Opener-Policy: same-origin
+  X-DNS-Prefetch-Control: on
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://t.contentsquare.net https://*.contentsquare.net https://d.clarity.ms https://*.clarity.ms https://unpkg.com https://cdn.jsdelivr.net https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://assets.calendly.com; font-src 'self' data: https://fonts.gstatic.com https://assets.calendly.com; img-src 'self' data: blob: https: https://*.google-analytics.com https://*.googletagmanager.com https://*.contentsquare.net; media-src 'self' blob: https://i-vory.studio; connect-src 'self' https: https://www.google-analytics.com https://*.google-analytics.com https://*.googletagmanager.com https://t.contentsquare.net https://*.contentsquare.net https://*.clarity.ms https://api.whatsapp.com; frame-src 'self' https://calendly.com https://*.calendly.com https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com; worker-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://api.whatsapp.com; frame-ancestors 'none'; upgrade-insecure-requests
+
+# HTML pages — no-cache, force re-fetch (prevents Safari iOS cache stale)
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# JS dinamic (mobile-fx itereaza des) — 5 min cache + revalidate
+/mobile-fx.js
+  Cache-Control: public, max-age=300, must-revalidate
+/earth-tex.js
+  Cache-Control: public, max-age=86400, must-revalidate
+/logo-svg.js
+  Cache-Control: public, max-age=86400, must-revalidate
+/premium-fx.js
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# Media imutabila
+/hero-video-web.mp4
+  Cache-Control: public, max-age=31536000, immutable
+
+/logo-nav.svg
+  Cache-Control: public, max-age=31536000, immutable
+
+/og-image.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/portfolio/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# AEO / LLM files — 1h cache (change more often)
+/llms.txt
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=3600, must-revalidate

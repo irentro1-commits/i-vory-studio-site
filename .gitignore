@@ -1,0 +1,18 @@
+# U8: scripting helpers + backups (Apr 2026)
+_*.bat
+_*.txt
+*.backup
+*.bak
+
+# skill drafts (local only, not for deploy)
+hyperpremium-landing-skill-*.md
+ivory-website-skill-*.md
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# secrets (defensive — .secrets/ normally lives outside repo, but block it here too)
+.secrets/
+*.secret

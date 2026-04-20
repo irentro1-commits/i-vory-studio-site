@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0;url=/portofoliu.html">
+<link rel="canonical" href="https://i-vory.studio/portofoliu.html">
+<title>Redirectare...</title>
+
+
+<link rel="alternate" hreflang="ro" href="https://i-vory.studio/portfolio.html">
+<script src="https://t.contentsquare.net/uxa/1c375afd3bba3.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-ND5ZF7NB');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+<!-- MOBILE PERFORMANCE PATCH v4 — tune lag without killing design -->
+<style id="mobile-perf-patch">
+@media (max-width: 900px), (pointer: coarse) {
+  /* KILL backdrop-filter only (the #1 scroll lag cause) */
+  *, *::before, *::after {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Solid bg on fixed elements */
+  nav, .nav, #nav, .dock, .wa-float {
+    background: rgba(5, 5, 5, 0.96) !important;
+  }
+
+  /* HIDE hero video on mobile (empty black rectangle killer) */
+  .hero-video, #heroVideo, #hvVid, .hv-play, #hvPlay {
+    display: none !important;
+  }
+
+  /* Hide section s2 that only contained the hero video */
+  section.s2 .hero-video { display: none !important; }
+
+  /* Reduce huge box-shadow blur to 15px max */
+  .pk, .type-card, .proof-card, .faq-item, .contact-alt,
+  .card, .testim, button, .nc, .dock__chip.is-active {
+    box-shadow: 0 3px 15px rgba(0,0,0,0.45) !important;
+  }
+
+  /* Hide meteor cursor (irrelevant on touch) */
+  #meteor-cursor, #meteor-flame, #meteor-flame2, #meteor-flame3,
+  .meteor-cursor, [id^="meteor"], [class^="meteor"] {
+    display: none !important;
+  }
+
+  /* Reduce transitions (snappy response) */
+  * {
+    transition-duration: 0.2s !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+<script id="mobile-perf-js">
+/* Block ONLY meteor-cursor + premium-fx on mobile, nothing else */
+(function(){
+  var isMobile = window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 900;
+  if (!isMobile) return;
+  window.MOBILE_DEVICE = true;
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('[id^="meteor"], [class^="meteor"]').forEach(function(el){el.remove();});
+    /* Also remove hero-video element entirely to free memory */
+    var hv = document.getElementById('heroVideo') || document.querySelector('.hero-video');
+    if (hv) hv.remove();
+    var hvVid = document.getElementById('hvVid');
+    if (hvVid) { hvVid.pause(); hvVid.remove(); }
+  });
+})();
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5ZF7NB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<p>Pagina s-a mutat. <a href="/portofoliu.html">Click aici</a>.</p>
+
+
+<script id="nav-auto-hide">
+(function(){
+  var nav=document.getElementById('nav')||document.querySelector('nav');
+  if(!nav)return;
+  var lastY=window.scrollY;
+  var ticking=false;
+  function update(){
+    var cur=window.scrollY;
+    if(cur<20){
+      nav.classList.remove('nav-hidden');
+      document.body.classList.remove('nav-hidden');
+    } else if(cur>lastY+4){
+      nav.classList.add('nav-hidden');
+      document.body.classList.add('nav-hidden');
+    } else if(cur<lastY-4){
+      nav.classList.remove('nav-hidden');
+      document.body.classList.remove('nav-hidden');
+    }
+    lastY=cur;
+    ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(update);ticking=true;}
+  },{passive:true});
+})();
+</script>
+<script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/meteor-cursor.js";s.defer=true;document.head.appendChild(s);})();</script><!-- was: meteor-cursor.js -->
+<script src="/gtm-events.js" defer></script>
+</body>
+</html>

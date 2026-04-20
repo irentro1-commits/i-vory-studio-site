@@ -1,0 +1,16 @@
+{
+  "name": "i-vory Studio",
+  "short_name": "i-vory Studio",
+  "description": "Social Media Content Factory — București",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#00e0c0",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
