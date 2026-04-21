@@ -1,32 +1,33 @@
-# i-vory.studio — BLOCKED FROM INDEXING
-# Reason: dual-domain strategy active 2026-04-21.
-# i-vory.ro = RO production (indexed).
-# i-vory.studio = EN version — blocked until EN content is translated and hreflang setup is complete.
-# Unblock checklist: (1) EN content live, (2) hreflang RO<->EN on both domains, (3) remove noindex meta + X-Robots-Tag, (4) flip this file back to Allow.
+# i-vory.studio — INDEXING ALLOWED (unblocked 2026-04-21)
+# Dual-domain active: i-vory.ro (RO) + i-vory.studio (EN) with hreflang bidirectional.
+# Note: /case/iorga.html remains blocked (client NDA — HIDE_IORGA policy).
 
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
 User-agent: ClaudeBot
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
 User-agent: Claude-Web
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
 User-agent: PerplexityBot
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
 User-agent: CCBot
-Disallow: /
+Allow: /
+Disallow: /case/iorga.html
 
-User-agent: anthropic-ai
-Disallow: /
-
-User-agent: cohere-ai
-Disallow: /
+Sitemap: https://i-vory.studio/sitemap.xml
