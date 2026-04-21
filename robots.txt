@@ -1,35 +1,32 @@
-User-agent: *
-Allow: /
-Disallow: /andrei.html
-Disallow: /_*.html
-Disallow: /index-v7-backup.html
-Disallow: /ivory-v8.html
-Disallow: /ivory-v9.html
-Disallow: /portfolio.html
+# i-vory.studio — BLOCKED FROM INDEXING
+# Reason: dual-domain strategy active 2026-04-21.
+# i-vory.ro = RO production (indexed).
+# i-vory.studio = EN version — blocked until EN content is translated and hreflang setup is complete.
+# Unblock checklist: (1) EN content live, (2) hreflang RO<->EN on both domains, (3) remove noindex meta + X-Robots-Tag, (4) flip this file back to Allow.
 
-# AI / LLM crawlers — explicit allow for AEO visibility
+User-agent: *
+Disallow: /
+
 User-agent: GPTBot
-Allow: /
+Disallow: /
 
 User-agent: ClaudeBot
-Allow: /
+Disallow: /
 
 User-agent: Claude-Web
-Allow: /
+Disallow: /
 
 User-agent: PerplexityBot
-Allow: /
+Disallow: /
 
 User-agent: Google-Extended
-Allow: /
+Disallow: /
 
 User-agent: CCBot
-Allow: /
+Disallow: /
 
 User-agent: anthropic-ai
-Allow: /
+Disallow: /
 
 User-agent: cohere-ai
-Allow: /
-
-Sitemap: https://i-vory.studio/sitemap.xml
+Disallow: /
