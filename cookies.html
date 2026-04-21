@@ -79,12 +79,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="alternate" hreflang="ro" href="https://i-vory.ro/cookies.html">
 <link rel="alternate" hreflang="x-default" href="https://i-vory.studio/cookies.html">
 <!-- HREFLANG_END PIVOT.9 -->
+
+
+
+
+<!-- LANG_CSS_START -->
+<style>
+.nlang{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .7rem;margin:0 .5rem;border:1px solid rgba(255,255,255,.18);border-radius:999px;font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);text-decoration:none;background:transparent;transition:all .25s cubic-bezier(.4,0,.2,1);white-space:nowrap}
+.nlang:hover{border-color:rgba(0,224,192,.5);color:#fff;background:rgba(0,224,192,.08)}
+.nlang svg{flex-shrink:0;opacity:.9}
+.nlang:hover svg{opacity:1}
+.mm-lang{display:flex;align-items:center;gap:.5rem;padding:.8rem 0;color:rgba(255,255,255,.72);font-family:var(--sans);font-size:.95rem;text-decoration:none;border-top:1px solid rgba(255,255,255,.08);margin-top:.8rem}
+.mm-lang svg{flex-shrink:0}
+.mm-lang:hover{color:#fff}
+@media(max-width:720px){.nlang{padding:.3rem .55rem;margin:0 .3rem}.nlang span{display:none}}
+</style>
+<!-- LANG_CSS_END -->
 </head><body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5ZF7NB"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<nav><a class="nl" href="/"><img src="/logo-nav.svg?v=6" alt="i-vory Studio"></a><ul class="nk"><li><a href="/#servicii">Services</a></li><li><a href="/#pachete">Packages</a></li><li><a href="/portofoliu.html">Portfolio</a></li><li><a href="/blog/">Blog</a></li></ul></nav><main><div class="eyebrow">Legal</div><h1>Cookie Policy</h1><p class="meta">Last updated: April 10, 2026</p><h2>1. What Cookies Are</h2>
+<nav><a class="nl" href="/"><img src="/logo-nav.svg?v=6" alt="i-vory Studio"></a><ul class="nk"><li><a href="/#servicii">Services</a></li><li><a href="/#pachete">Packages</a></li><li><a href="/portofoliu.html">Portfolio</a></li><li><a href="/blog/">Blog</a></li><li></li><li></li><li><!-- LANG_NAV_START --><a href="https://i-vory.ro/" class="nlang" data-lang-switch="ro" aria-label="Schimba la versiunea romana" title="Versiunea romana"><svg width="14" height="10" viewBox="0 0 18 12" aria-hidden="true"><rect width="6" height="12" x="0" fill="#002B7F"/><rect width="6" height="12" x="6" fill="#FCD116"/><rect width="6" height="12" x="12" fill="#CE1126"/></svg><span>RO</span></a><!-- LANG_NAV_END --></li></ul></nav><main><div class="eyebrow">Legal</div><h1>Cookie Policy</h1><p class="meta">Last updated: April 10, 2026</p><h2>1. What Cookies Are</h2>
 <p>Cookies are small text files stored on your device when you visit a website. They allow the site to remember your actions and preferences (language, login, favorites).</p>
 
 <h2>2. Cookies We Use</h2>
@@ -215,4 +231,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 <script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/meteor-cursor.js";s.defer=true;document.head.appendChild(s);})();</script><!-- was: meteor-cursor.js -->
 <script src="/gtm-events.js?v=2" defer></script>
+
+
+
+
+<!-- LANG_JS_START -->
+<script>
+(function(){
+  var RO_ONLY=['/blog/metrici-reale-social-media-2026.html'];
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('[data-lang-switch]');
+    if(!el)return;
+    e.preventDefault();
+    var lang=el.getAttribute('data-lang-switch');
+    var domain=lang==='en'?'https://i-vory.studio':'https://i-vory.ro';
+    var path=window.location.pathname;
+    if(lang==='en'&&RO_ONLY.indexOf(path)!==-1){
+      window.location.href=domain+'/';
+    }else{
+      window.location.href=domain+path;
+    }
+  });
+})();
+</script>
+<!-- LANG_JS_END -->
 </body></html>
