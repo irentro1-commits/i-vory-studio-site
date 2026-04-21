@@ -1,32 +1,100 @@
 # i-vory.studio — INDEXING ALLOWED (unblocked 2026-04-21)
 # Dual-domain active: i-vory.ro (RO) + i-vory.studio (EN) with hreflang bidirectional.
 # Note: /case/iorga.html remains blocked (client NDA — HIDE_IORGA policy).
+# Content signals declared per AIPREF draft-romm (2026) — agency welcomes AI training + search + input citations.
 
 User-agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
 User-agent: GPTBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: OAI-SearchBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: ChatGPT-User
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
 User-agent: ClaudeBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
 User-agent: Claude-Web
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: Claude-SearchBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
 User-agent: PerplexityBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: Perplexity-User
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
 User-agent: Google-Extended
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: GoogleOther
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
 User-agent: CCBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: anthropic-ai
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: cohere-ai
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: Meta-ExternalAgent
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: Applebot-Extended
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: Amazonbot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: Bytespider
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+Allow: /
+Disallow: /case/iorga.html
+
+User-agent: DuckAssistBot
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 Disallow: /case/iorga.html
 
