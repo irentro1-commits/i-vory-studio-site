@@ -46,7 +46,7 @@ else:  # studio
     BTN_TITLE = "Versiunea romana"
     MM_LABEL = "Romana"
     # SVG: flag RO (3 stripes: blue yellow red)
-    BTN_SVG = '<svg width="14" height="10" viewBox="0 0 18 12" aria-hidden="true"><rect width="6" height="12" x="0" fill="#002B7F"/><rect width="6" height="12" x="6" fill="#FCD116"/><rect width="6" height="12" x="12" fill="#CE1126"/></svg>'
+    BTN_SVG = '<svg width="18" height="12" viewBox="0 0 3 2" aria-hidden="true" style="display:inline-block;vertical-align:middle;border:1px solid rgba(255,255,255,.18);border-radius:2px;flex-shrink:0"><rect x="0" y="0" width="1" height="2" fill="#002B7F"/><rect x="1" y="0" width="1" height="2" fill="#FCD116"/><rect x="2" y="0" width="1" height="2" fill="#CE1126"/></svg>'
 
 # Pagini pe care NU injectam (hidden sau error)
 SKIP_FILES = {"case/iorga.html", "404.html"}
