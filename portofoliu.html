@@ -17,9 +17,11 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..900,0..100,0..1;1,9..144,300..900,0..100,0..1&family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700;800&family=Geist+Mono:wght@500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700;800&family=Geist+Mono:wght@500&display=swap"></noscript>
+<script>try{(function(){var load=function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Geist:wght@600;900&family=Instrument+Serif:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&display=swap';document.head.appendChild(l)};if(document.readyState==='complete'){('requestIdleCallback' in window)?requestIdleCallback(load,{timeout:2500}):setTimeout(load,2000)}else{window.addEventListener('load',function(){('requestIdleCallback' in window)?requestIdleCallback(load,{timeout:2500}):setTimeout(load,2000)})}})()}catch(_){}</script>
 
 <!-- Open Graph -->
 <meta property="og:title" content="Portofoliu — carusele, video, e-commerce | i-vory Studio">
@@ -134,10 +136,10 @@
   --border-hi:    rgba(0, 224, 192, 0.28);
 
   /* fonts */
-  --font-serif:   'Fraunces', Georgia, serif;
+  --font-serif:   'Geist', -apple-system, sans-serif;
   --font-italic:  'Instrument Serif', Georgia, serif;
   --font-mono:    'Geist Mono', ui-monospace, 'Cascadia Code', monospace;
-  --font-greek:   'Cormorant Garamond', 'STIX Two Math', 'Cambria Math', Georgia, serif;
+  --font-greek:   'Instrument Serif', Georgia, serif;
 
   /* scale */
   --radius-sm:    10px;
