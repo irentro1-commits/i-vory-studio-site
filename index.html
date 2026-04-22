@@ -1859,8 +1859,7 @@ var __probTick=false;function __onScrollProb(){if(!__probTick){requestAnimationF
 // Portfolio tabs
 document.querySelectorAll('.pf-tab').forEach(function(tab){tab.addEventListener('click',function(){document.querySelectorAll('.pf-tab').forEach(function(t){t.classList.remove('active')});document.querySelectorAll('.pf-panel').forEach(function(p){p.classList.remove('active')});tab.classList.add('active');var panel=document.getElementById('pf-'+tab.dataset.tab);if(panel){panel.classList.add('active');panel.querySelectorAll('.rv').forEach(function(el){obs.observe(el)})}})});
 
-// Contact form
-var __cf=document.getElementById('contactForm');if(__cf)__cf.addEventListener('submit',function(e){e.preventDefault();var n=document.getElementById('cName').value,em=document.getElementById('cEmail').value,m=document.getElementById('cMsg').value;window.location.href='mailto:contact@i-vory.studio?subject='+encodeURIComponent('Request from site - '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+em+'\n\nMessage:\n'+m)});
+// Contact form: native HTTP POST la formsubmit.co (zero JS hijack, zero mailto picker).
 
 // Cookie consent
 var cb=document.getElementById('cookieBar');
