@@ -325,6 +325,8 @@ footer{border-top:1px solid var(--br);padding:2.5rem;background:rgba(5,5,5,.5);b
   /* Kill bloom on mobile for perf */
 }
 @media(max-width:480px){.contact-alts{grid-template-columns:1fr}.pf-grid{grid-template-columns:repeat(2,1fr);gap:.5rem}}
+/* U38: fix Dhanutu real-device feedback — portofoliu grid 2 cols pe mobile + imagini contain + CTAs centered */
+@media(max-width:768px){.pf-grid{grid-template-columns:repeat(2,1fr);gap:.6rem}.pf-img img{object-fit:contain;background:var(--bg4)}.s2-actions{justify-content:center}.s2 .s2-desc{text-align:center;margin-left:auto;margin-right:auto}.s2 h2{text-align:center}.s2-tag{justify-content:center}.s2-prices{text-align:center}}
 @media(prefers-reduced-motion:reduce){
   .hero3d{opacity:.3}
   *{animation:none !important;transition:none !important}
