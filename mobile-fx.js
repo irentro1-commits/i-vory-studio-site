@@ -146,11 +146,10 @@
       'width:'+ringSize+'px','height:'+ringSize+'px',
       'transform:translate(-50%,-50%)',
       'pointer-events:none',
-      /* P0-M2: contain + will-change izoleaza compositing layer pe GPU, nu re-evalueaza pagina. */
-      'contain:layout style paint',
+      /* U37c: scot "paint" din contain (clipeaza sateliti la edge ringBox). Pastrez layout+style pentru perf — iconitele pozitionate la cos/sin*radius ies 50%% din box, cu contain:paint sunt taiate mathematic. */
+      'contain:layout style',
+      'overflow:visible',
       'will-change:transform',
-      /* U37b: z-index:3 peste dragon (z:1) ca sateliti sa nu fie acoperiti cand orbita trece prin upper-right. */
-      'z-index:3',
       'animation: '+(dir==='cw'?'mfxOrbitCW':'mfxOrbitCCW')+' '+dur+'s linear infinite'
     ].join(';');
     var trace=document.createElement('div');
@@ -174,8 +173,9 @@
         'left:'+cx+'px','top:'+cy+'px',
         'width:'+sat.size+'px','height:'+sat.size+'px',
         'transform:translate(-50%,-50%)',
-        /* P0-M2: contain + will-change pe counter (rotatie contra-sens = animation transform). */
-        'contain:layout style paint',
+        /* U37c: scot "paint" din contain ca halo (box-shadow sat.size*.75px) sa nu fie clipat la edge counter box. */
+        'contain:layout style',
+        'overflow:visible',
         'will-change:transform',
         'animation: '+(dir==='cw'?'mfxOrbitCCW':'mfxOrbitCW')+' '+dur+'s linear infinite',
         'transform-origin:center'
@@ -192,7 +192,8 @@
         'display:flex','align-items:center','justify-content:center',
         'padding:'+(sat.size*.18)+'px',
         'box-sizing:border-box',
-        'contain:layout style paint',
+        /* U37c: scot "paint" din contain (clipeaza box-shadow halo mov la edge badge). Pastrez layout+style pentru perf. */
+        'contain:layout style',
         'will-change:transform',
         (TIER_LOW?'':'animation: mfxSatPulse '+(2.5+s*.6)+'s ease-in-out infinite')
       ].join(';');
@@ -239,19 +240,17 @@
   logoImg.setAttribute('aria-hidden','true');
   /* P0-M1: filter TRIPLE drop-shadow → SINGLE (56kb SVG × 3 blur pass × infinite animation = GPU saturation pe mobile low-end).
      Halo mov dominant intr-un singur pass. contain+will-change izoleaza dragon intr-un compositing layer propriu = zero reflow pe rest pagina. */
-  /* U37b: dragon shrunk + pushed corner + halo redus pentru a NU acoperi IG satelit la rotatia prin upper-right. */
   logoImg.style.cssText=[
     'position:absolute',
-    'right:2%','top:3%',
-    'width:'+Math.min(W*.26,115)+'px',
+    'right:5%','top:10%',
+    'width:'+Math.min(W*.4,180)+'px',
     'height:auto',
     'opacity:1',
-    'filter:drop-shadow(0 0 14px rgba(186,85,211,.8))',
+    'filter:drop-shadow(0 0 28px rgba(186,85,211,.9))',
     'animation: mfxDragonFloat 6s ease-in-out infinite',
     'contain:layout style paint',
     'will-change:transform',
-    'pointer-events:none',
-    'z-index:1'
+    'pointer-events:none'
   ].join(';');
   // Fallback sa nu ramana gol daca src-ul principal eseueaza
   logoImg.onerror=function(){
