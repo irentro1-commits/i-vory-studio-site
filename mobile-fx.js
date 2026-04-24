@@ -149,6 +149,8 @@
       /* P0-M2: contain + will-change izoleaza compositing layer pe GPU, nu re-evalueaza pagina. */
       'contain:layout style paint',
       'will-change:transform',
+      /* U37b: z-index:3 peste dragon (z:1) ca sateliti sa nu fie acoperiti cand orbita trece prin upper-right. */
+      'z-index:3',
       'animation: '+(dir==='cw'?'mfxOrbitCW':'mfxOrbitCCW')+' '+dur+'s linear infinite'
     ].join(';');
     var trace=document.createElement('div');
@@ -237,17 +239,19 @@
   logoImg.setAttribute('aria-hidden','true');
   /* P0-M1: filter TRIPLE drop-shadow → SINGLE (56kb SVG × 3 blur pass × infinite animation = GPU saturation pe mobile low-end).
      Halo mov dominant intr-un singur pass. contain+will-change izoleaza dragon intr-un compositing layer propriu = zero reflow pe rest pagina. */
+  /* U37b: dragon shrunk + pushed corner + halo redus pentru a NU acoperi IG satelit la rotatia prin upper-right. */
   logoImg.style.cssText=[
     'position:absolute',
-    'right:5%','top:10%',
-    'width:'+Math.min(W*.4,180)+'px',
+    'right:2%','top:3%',
+    'width:'+Math.min(W*.26,115)+'px',
     'height:auto',
     'opacity:1',
-    'filter:drop-shadow(0 0 28px rgba(186,85,211,.9))',
+    'filter:drop-shadow(0 0 14px rgba(186,85,211,.8))',
     'animation: mfxDragonFloat 6s ease-in-out infinite',
     'contain:layout style paint',
     'will-change:transform',
-    'pointer-events:none'
+    'pointer-events:none',
+    'z-index:1'
   ].join(';');
   // Fallback sa nu ramana gol daca src-ul principal eseueaza
   logoImg.onerror=function(){
