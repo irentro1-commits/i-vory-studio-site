@@ -88,7 +88,7 @@
   var earthWrap=document.createElement('div');
   earthWrap.style.cssText=[
     'position:absolute',
-    'left:50%','top:28%',
+    'left:50%','top:36%',
     'width:'+earthSize+'px','height:'+earthSize+'px',
     'transform:translate(-50%,-50%)',
     'pointer-events:none',
@@ -142,7 +142,7 @@
     var ring=document.createElement('div');
     ring.style.cssText=[
       'position:absolute',
-      'left:50%','top:28%',
+      'left:50%','top:36%',
       'width:'+ringSize+'px','height:'+ringSize+'px',
       'transform:translate(-50%,-50%)',
       'pointer-events:none',
@@ -216,8 +216,8 @@
     {angle:60, type:'tt', size:30},
     {angle:230, type:'yt', size:30}
   ]);
-  // Orbita exterioara lenta: FB + LI
-  makeOrbit(ringBase*1.6, 26, 'cw', [
+  // Orbita exterioara lenta: FB + LI (U37: 1.6→1.4 reduce radius pentru anti-crop mobile real device)
+  makeOrbit(ringBase*1.4, 26, 'cw', [
     {angle:150, type:'fb', size:28},
     {angle:330, type:'li', size:28}
   ]);

@@ -83,7 +83,7 @@
 <!-- P1-L1: scripts mobile chain preload paralel (media query = doar mobile). Download upfront, executia secventiala ramana (mobile-fx.js depinde de __EARTH_TEX + __LOGO_SVG_B64). Economie 0.5-1.5s pe 4G slow. -->
 <link rel="preload" media="(max-width:768px)" as="script" href="/earth-tex.js?v=34">
 <link rel="preload" media="(max-width:768px)" as="script" href="/logo-svg.js?v=35">
-<link rel="preload" media="(max-width:768px)" as="script" href="/mobile-fx.js?v=36">
+<link rel="preload" media="(max-width:768px)" as="script" href="/mobile-fx.js?v=37">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700;800&family=Geist+Mono:wght@500&display=swap"></noscript>
 <script>try{(function(){/* U16: defer Fraunces + Instrument Serif + extra Geist weights (below-fold: mobile menu + accent italics + calc price) dupa window.load */var load=function(){var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Geist:wght@600;900&family=Instrument+Serif:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&display=swap';document.head.appendChild(l)};if(document.readyState==='complete'){('requestIdleCallback' in window)?requestIdleCallback(load,{timeout:2500}):setTimeout(load,2000)}else{window.addEventListener('load',function(){('requestIdleCallback' in window)?requestIdleCallback(load,{timeout:2500}):setTimeout(load,2000)})}})()}catch(_){}</script>
 <style id="v95-consolidated">
@@ -1793,7 +1793,7 @@ if(isMobile){
       lg.src='logo-svg.js?v=35';
       lg.onload=function(){
         var bg=document.createElement('script');
-        bg.src='mobile-fx.js?v=36';
+        bg.src='mobile-fx.js?v=37';
         document.head.appendChild(bg);
       };
       document.head.appendChild(lg);
