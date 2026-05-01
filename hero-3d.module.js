@@ -199,22 +199,51 @@ function updateShooting(dt,t){
   }
 }
 
-// ========== PLANET EARTH (NASA texture) ==========
-const earthTex=new THREE.TextureLoader().load(window.__EARTH_TEX);
-earthTex.colorSpace=THREE.SRGBColorSpace;
-const planetGeo=new THREE.SphereGeometry(window.__IS_MOBILE?1.4:1.1,64,64);
-const planetMat=new THREE.MeshBasicMaterial({
-  map:earthTex,
-  color:0xffffff,
-  transparent:false
+// ========== PLANET EARTH — U41 realistic NASA Blue Marble + MeshStandardMaterial reactiv la lighting + clouds layer + atmosphere glow rim ==========
+const _texLoader=new THREE.TextureLoader();
+_texLoader.crossOrigin='anonymous';
+const _NASA='https://threejs.org/examples/textures/planets/';
+const earthDayTex=_texLoader.load(_NASA+'earth_atmos_2048.jpg', undefined, undefined, ()=>{
+  if(window.__EARTH_TEX){const fb=_texLoader.load(window.__EARTH_TEX);fb.colorSpace=THREE.SRGBColorSpace;planetMat.map=fb;planetMat.needsUpdate=true;}
 });
-// Add point light stuck to planet for glow on desktop
-const planetLight=new THREE.PointLight(0x6ab5ff,1.5,10);
-// Dummy uniforms object for animate loop compatibility
+earthDayTex.colorSpace=THREE.SRGBColorSpace;
+earthDayTex.anisotropy=8;
+const earthSpecTex=_texLoader.load(_NASA+'earth_specular_2048.jpg');
+const earthBumpTex=_texLoader.load(_NASA+'earth_normal_2048.jpg');
+
+const planetGeo=new THREE.SphereGeometry(window.__IS_MOBILE?1.4:1.1,96,96);
+const planetMat=new THREE.MeshStandardMaterial({
+  map:earthDayTex,
+  normalMap:earthBumpTex,
+  normalScale:new THREE.Vector2(.65,.65),
+  roughnessMap:earthSpecTex,
+  roughness:.78,
+  metalness:.05,
+  color:0xffffff
+});
 planetMat.uniforms={time:{value:0}};
 const planet=new THREE.Mesh(planetGeo,planetMat);
 planet.position.set(window.__IS_MOBILE?0:-12,window.__IS_MOBILE?2.8:7,window.__IS_MOBILE?-3:-15);
 scene.add(planet);
+
+let _clouds=null;
+if(!window.__IS_MOBILE){
+  const cloudsTex=_texLoader.load(_NASA+'earth_clouds_2048.png');
+  cloudsTex.colorSpace=THREE.SRGBColorSpace;
+  const cloudsMat=new THREE.MeshStandardMaterial({
+    map:cloudsTex,
+    transparent:true,
+    opacity:.55,
+    roughness:1,
+    metalness:0,
+    depthWrite:false,
+    blending:THREE.NormalBlending
+  });
+  _clouds=new THREE.Mesh(new THREE.SphereGeometry(1.118,64,64), cloudsMat);
+  _clouds.position.copy(planet.position);
+  scene.add(_clouds);
+  window.__heroClouds=_clouds;
+}
 
 // ========== SOCIAL MEDIA SATELLITES ==========
 function makeLogoTexture(bg,draw){
@@ -267,15 +296,16 @@ logos.forEach((l,i)=>{
   scene.add(sprite);
 });
 
-// Planet glow halo DISABLED
-const _haloGeoUnused=new THREE.SphereGeometry(1.3,32,32);
+// U41: ATMOSPHERE GLOW HALO ACTIVATED — fresnel rim albastru, signature realistic Earth
+const haloGeo=new THREE.SphereGeometry(window.__IS_MOBILE?1.55:1.32,64,64);
 const haloMat=new THREE.ShaderMaterial({
   uniforms:{},
-  vertexShader:'varying vec3 vNormal;varying vec3 vPos;void main(){vNormal=normalize(normalMatrix*normal);vPos=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
-  fragmentShader:'varying vec3 vNormal;varying vec3 vPos;void main(){vec3 viewDir=normalize(-vPos);float f=pow(1.-max(dot(vNormal,viewDir),0.),2.5);gl_FragColor=vec4(vec3(.2,.6,1.)*f,f*.8);}',
+  vertexShader:'varying vec3 vNormal;varying vec3 vViewDir;void main(){vec4 mvPos=modelViewMatrix*vec4(position,1.);vNormal=normalize(normalMatrix*normal);vViewDir=normalize(-mvPos.xyz);gl_Position=projectionMatrix*mvPos;}',
+  fragmentShader:'varying vec3 vNormal;varying vec3 vViewDir;void main(){float f=pow(1.-max(dot(vNormal,vViewDir),0.),2.8);vec3 atmCol=mix(vec3(.18,.5,1.),vec3(.55,.78,1.),f);gl_FragColor=vec4(atmCol*f*1.7,f*.95);}',
   transparent:true,side:THREE.BackSide,depthWrite:false,blending:THREE.AdditiveBlending
 });
-const halo=new THREE.Mesh(_haloGeoUnused,haloMat);halo.visible=false;
+const halo=new THREE.Mesh(haloGeo,haloMat);
+halo.visible=!window.__IS_MOBILE;
 halo.position.copy(planet.position);
 scene.add(halo);
 
@@ -527,6 +557,8 @@ function animate(){
   androMat.uniforms.time.value=t;
   planetMat.uniforms.time.value=t;
   planet.rotation.y=t*.05;
+  if(_clouds){_clouds.rotation.y=t*.07;_clouds.position.copy(planet.position);}
+  if(halo.visible){halo.position.copy(planet.position);}
   mars.rotation.y=t*.08;
   // Orbit satellites around Earth
   satellites.forEach(s=>{
