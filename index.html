@@ -2282,6 +2282,9 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 <!-- PREMIUM_FX_2026_START — desktop-only premium UX layer v2 (Lenis + 2A section transitions + 2B cursor + 2C kinetic) -->
 <script>try{if(!window.__IS_MOBILE&&!window.__IS_INAPP&&window.matchMedia&&window.matchMedia("(pointer:fine)").matches){
   function _loadJS(src,cb){var s=document.createElement('script');s.src=src;if(cb)s.onload=cb;document.head.appendChild(s);return s;}
+  // U49 DEFER 2026-05-02: premium-fx booteaza la primul gesture user SAU 3500ms (PSI TBT fix).
+  function __pfxBoot(){
+    if(window.__PFX_BOOTED)return; window.__PFX_BOOTED=true;
   _loadJS('https://unpkg.com/lenis@1.1.13/dist/lenis.min.js', function(){ _loadJS('/premium-fx-2026.js?v=1'); });
   _loadJS('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', function(){ _loadJS('/section-transitions.js?v=1'); });
   _loadJS('/cursor-fx.js?v=1');
@@ -2303,6 +2306,9 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   _loadJS('/cta-pulse.js?v=1');
   _loadJS('/h2-expand.js?v=1');
   _loadJS('/magnetic-strong.js?v=1');
+  }
+  ['mousemove','scroll','keydown','touchstart','pointerdown'].forEach(ev=>window.addEventListener(ev,__pfxBoot,{once:true,passive:true}));
+  setTimeout(__pfxBoot,3500);
 }}catch(_pferr){console.warn('premium-fx v2 loader',_pferr);}</script>
 <!-- PREMIUM_FX_2026_END -->
 </body></html>
