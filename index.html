@@ -2251,8 +2251,8 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   },{passive:true});
 })();
 </script>
-<!-- METEOR CURSOR DISABLED 2026-05-02 — Andy: linie rosie urata urmarea cursorul. Cursor trail din BATCH 5 e suficient. -->
-<!-- <script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/meteor-cursor.js";s.defer=true;document.head.appendChild(s);})();</script> -->
+<!-- METEOR CURSOR RESTORED U53 2026-05-02 — Andy: 'era super smechera, scoate celelalte cursor fx in loc' -->
+<script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/meteor-cursor.js";s.defer=true;document.head.appendChild(s);})();</script>
 <script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/gsap-kinetic.js";s.defer=true;document.head.appendChild(s);})();</script><!-- U3: GSAP kinetic hero + magnetic buttons -->
 <script>(function(){if(window.matchMedia("(pointer:coarse)").matches||window.innerWidth<=900)return;var s=document.createElement("script");s.src="/u4-transitions.js";s.defer=true;document.head.appendChild(s);})();</script><!-- U4: Lenis smooth scroll (View Transitions handled via CSS above) -->
 <script src="/gtm-events.js?v=2" defer></script>
@@ -2290,7 +2290,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
     if(window.__PFX_BOOTED)return; window.__PFX_BOOTED=true;
   _loadJS('https://unpkg.com/lenis@1.1.13/dist/lenis.min.js', function(){ _loadJS('/premium-fx-2026.js?v=1'); });
   _loadJS('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js', function(){ _loadJS('/section-transitions.js?v=1'); });
-  _loadJS('/cursor-fx.js?v=1');
+  // _loadJS('/cursor-fx.js?v=1'); // U53 KILLED — meteor-cursor restored, cursor-fx redundant
   _loadJS('/kinetic-fx.js?v=1');
   _loadJS('/page-transitions-v2.js?v=1');
   _loadJS('/loader-fx.js?v=1');
@@ -2302,7 +2302,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   // _loadJS('/sticky-ui.js?v=1');
   // _loadJS('/interactions-ultra.js?v=1');
   // === BATCH 5 (U46) — cursor trail + number counter + 3D card tilt. Pure-additive, zero layout impact ===
-  _loadJS('/cursor-trail.js?v=1');
+  // _loadJS('/cursor-trail.js?v=1'); // U53 KILLED — meteor-cursor restored
   _loadJS('/number-counter.js?v=1');
   _loadJS('/card-tilt-3d.js?v=1');
   // === BATCH 6 (U47) — CTA idle pulse + h2 letter-spacing expand + stronger magnetic CTA ===
