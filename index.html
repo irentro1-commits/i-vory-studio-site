@@ -2282,6 +2282,21 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 <!-- LANG_JS_END -->
 <!-- HERO_GALAXY_TEXT U51 2026-05-02 — kinetic entrance hero h2 din galaxie litera cu litera (load IMEDIAT, before kinetic-fx) -->
 <script>(function(){var s=document.createElement('script');s.src='/hero-galaxy-text.js?v=1';s.defer=false;s.async=false;document.head.appendChild(s);})();</script>
+<!-- U54 NO SCALE ON CTA — Andy: 'hero-urile se maresc la click, da impresia de ieftin' -->
+<style id="u54-no-scale">
+  .bh:hover, .b-peach:hover, .b-peach:hover.bh, .pk-f:hover, .pk-gold:hover, .nc:hover, .pk-btn:hover {
+    transform: translateY(-2px) !important;
+  }
+  .bh:active, .b-peach:active, .pk-f:active, .pk-gold:active, .nc:active, .pk-btn:active, .b-ghost:active {
+    transform: translateY(0) !important;
+  }
+  .pf-card:hover, .pkg:hover, .pricing-card:hover, .case-card:hover, .blog-card:hover {
+    transform: translateY(-4px) !important;
+  }
+  .pf-card:active, .pkg:active, .pricing-card:active, .case-card:active, .blog-card:active {
+    transform: translateY(0) !important;
+  }
+</style>
 <!-- PREMIUM_FX_2026_START — desktop-only premium UX layer v2 (Lenis + 2A section transitions + 2B cursor + 2C kinetic) -->
 <script>try{if(!window.__IS_MOBILE&&!window.__IS_INAPP&&window.matchMedia&&window.matchMedia("(pointer:fine)").matches){
   function _loadJS(src,cb){var s=document.createElement('script');s.src=src;if(cb)s.onload=cb;document.head.appendChild(s);return s;}
@@ -2304,7 +2319,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   // === BATCH 5 (U46) — cursor trail + number counter + 3D card tilt. Pure-additive, zero layout impact ===
   // _loadJS('/cursor-trail.js?v=1'); // U53 KILLED — meteor-cursor restored
   _loadJS('/number-counter.js?v=1');
-  _loadJS('/card-tilt-3d.js?v=1');
+  // _loadJS('/card-tilt-3d.js?v=1'); // U54 KILLED — Andy: 'da impresia de ieftin la click'
   // === BATCH 6 (U47) — CTA idle pulse + h2 letter-spacing expand + stronger magnetic CTA ===
   _loadJS('/cta-pulse.js?v=1');
   _loadJS('/h2-expand.js?v=1');
