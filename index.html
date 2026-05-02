@@ -2280,8 +2280,8 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
 })();
 </script>
 <!-- LANG_JS_END -->
-<!-- HERO_GALAXY_TEXT U51 2026-05-02 — kinetic entrance hero h2 din galaxie litera cu litera (load IMEDIAT, before kinetic-fx) -->
-<script>(function(){var s=document.createElement('script');s.src='/hero-galaxy-text.js?v=1';s.defer=false;s.async=false;document.head.appendChild(s);})();</script>
+<!-- HERO_GALAXY_TEXT U51 DISABLED 2026-05-02 — Andy: 'ai scos hero-ul de tot in plm' (textul aparea cu delay 200+1400ms, perceput ca disparut) -->
+<!-- <script>(function(){var s=document.createElement('script');s.src='/hero-galaxy-text.js?v=1';s.defer=false;s.async=false;document.head.appendChild(s);})();</script> -->
 <!-- U54 NO SCALE ON CTA — Andy: 'hero-urile se maresc la click, da impresia de ieftin' -->
 <style id="u54-no-scale">
   .bh:hover, .b-peach:hover, .b-peach:hover.bh, .pk-f:hover, .pk-gold:hover, .nc:hover, .pk-btn:hover {
@@ -2322,7 +2322,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
   // _loadJS('/card-tilt-3d.js?v=1'); // U54 KILLED — Andy: 'da impresia de ieftin la click'
   // === BATCH 6 (U47) — CTA idle pulse + h2 letter-spacing expand + stronger magnetic CTA ===
   _loadJS('/cta-pulse.js?v=1');
-  _loadJS('/h2-expand.js?v=1');
+  // _loadJS('/h2-expand.js?v=1'); // U55 KILLED — Andy: 'textele se maresc, da impresia de ieftin'
   _loadJS('/magnetic-strong.js?v=1');
   }
   ['mousemove','scroll','keydown','touchstart','pointerdown'].forEach(ev=>window.addEventListener(ev,__pfxBoot,{once:true,passive:true}));
